@@ -1,0 +1,1 @@
+// chage just the script.js file witch is this file

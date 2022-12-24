@@ -1,0 +1,106 @@
+/* write your code in the main style section */
+/* don't change the other code because your version will not be accepted */
+
+:root {
+  --main-color: #864d27;
+  --broun-color: #DE7230;
+  --orange-color: #F5C85F;
+  --yellow-color: #E6E392;
+  --gray-color: #F6F9FC;
+  --dark-color: #05030F;
+  --white-color: #fff;
+  --border-radius: 31px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* start nav style */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 20rem;
+  right: 0;
+  background: linear-gradient(270deg, #864D27 60.5%, rgba(134, 77, 39, 0) 205.23%);
+}
+
+.nav--button {
+  font-size: 1.5rem;
+  color: var(--orange-color);
+  float: right;
+  transition: .5s;
+}
+
+.nav--button:hover {
+  color: var(--dark-color);
+}
+
+/* end navbar style */
+
+/* start sidebar style */
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 20rem;
+  box-shadow: 0px 4px 4px 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  width: 10rem;
+  display: block;
+  margin: auto;
+}
+
+.section-buttons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.section-buttons li {
+  border-radius: 1rem;
+  margin: .5rem;
+  background-color: var(--gray-color);
+  transition: .5s;
+}
+
+.section-buttons li:hover,
+.section-buttons li.active {
+  background-color: var(--yellow-color);
+}
+
+.section-buttons a {
+  display: block;
+  padding: 20px;
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* end sidebar style */
+
+/* start main style */
+
+main {
+  position: absolute;
+  top: 4.5rem;
+  left: 20rem;
+  right: 0;
+  bottom: 0;
+}
+/* --------- write your code here --------- */
+
+/* end main style */
