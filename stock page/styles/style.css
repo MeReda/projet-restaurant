@@ -29,13 +29,13 @@ body {
 nav {
   position: fixed;
   top: 0;
-  left: 15rem;
+  left: 13rem;
   right: 0;
   background: linear-gradient(270deg, #864D27 60.5%, rgba(134, 77, 39, 0) 205.23%);
 }
 
 .nav--button {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--orange-color);
   float: right;
   transition: .5s;
@@ -54,12 +54,12 @@ nav {
   left: 0;
   top: 0;
   bottom: 0;
-  width: 15rem;
+  width: 13rem;
   box-shadow: 0px 4px 4px 5px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  width: 10rem;
+  width: 8rem;
   display: block;
   margin: auto;
 }
@@ -71,7 +71,7 @@ nav {
 }
 
 .section-buttons li {
-  border-radius: 1rem;
+  border-radius: .5rem;
   margin: .5rem;
   background-color: var(--gray-color);
   transition: .5s;
@@ -84,11 +84,11 @@ nav {
 
 .section-buttons a {
   display: block;
-  padding: 20px;
+  padding: 15px;
   color: var(--main-color);
   text-decoration: none;
   font-weight: bold;
-  font-size: .8rem;
+  font-size: .7rem;
 }
 
 /* end sidebar style */
@@ -98,7 +98,7 @@ nav {
 main {
   position: absolute;
   top: 4.5rem;
-  left: 15rem;
+  left: 13rem;
   right: 0;
   bottom: 0;
 }
