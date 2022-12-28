@@ -101,7 +101,37 @@ main {
   left: 15rem;
   right: 0;
   bottom: 0;
+  display: flex;
+  align-items: center;
 }
 /* --------- write your code here --------- */
 
+.my-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(6, 1fr);
+} 
+
+.home-info {
+  background-color: var(--yellow-color);
+  border: 2px solid var(--main-color);
+  border-radius: 1rem;
+  grid-column: span 2;
+  text-align: center;
+}
+
+.home-info .number {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.center-grid-1 {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+}
+
+.center-grid-2 {
+  grid-column-start: 4;
+  grid-column-end: span 2;
+}
 /* end main style */
