@@ -105,3 +105,24 @@ main {
 /* --------- write your code here --------- */
 
 /* end main style */
+
+.container{
+  margin-top: 10%;
+}
+.btn-1{
+  border: 0;
+  margin-left: 95%;
+  background-color: var(--white-color);
+  color:var(--main-color);
+  font-size: 1.5rem;
+}
+.edit-button{
+  border: 0;
+  background-color: var(--white-color);
+  color:var(--main-color);
+}
+.delete-button{
+  border: 0;
+  background-color: var(--white-color);
+  color:var(--main-color);
+}
