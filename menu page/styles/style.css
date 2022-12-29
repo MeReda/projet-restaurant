@@ -103,5 +103,28 @@ main {
   bottom: 0;
 }
 /* --------- write your code here --------- */
-
+.container{
+  margin-top: 10%;
+}
+.btn-1{
+  border: 0;
+  margin-left: 95%;
+  background-color: var(--white-color);
+  color:var(--main-color);
+  font-size: 1.5rem;
+}
+.btn-2{
+  border: 0;
+  background-color: var(--white-color);
+  color:var(--main-color);
+}
+.btn-3{
+  border: 0;
+  background-color: var(--white-color);
+  color:var(--main-color);
+}
+.pi{
+  border-radius: 50%;
+  width: 40px;
+}
 /* end main style */

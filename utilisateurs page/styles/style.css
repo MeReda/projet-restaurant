@@ -103,5 +103,30 @@ main {
   bottom: 0;
 }
 /* --------- write your code here --------- */
-
+.tableau{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.table{
+    margin: 0 auto;
+    width: 250px;
+}
+.btn-1{
+  border: 0;
+  margin-left: 30%;
+  background-color: var(--white-color);
+  color:var(--main-color);
+  font-size: 1.5rem;
+}
+.btn-2{
+  border: 0;
+  background-color: var(--white-color);
+  color:var(--main-color);
+}
+.btn-3{
+  border: 0;
+  background-color: var(--white-color);
+  color:var(--main-color);
+}
 /* end main style */
