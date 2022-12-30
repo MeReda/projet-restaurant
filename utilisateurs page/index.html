@@ -55,8 +55,90 @@
         </li>
       </ul>
     </div>
-    <main>
-        <h1>write your code here !!</h1>
+    <main class="d-flex align-items-center justify-content-center">
+      <div class="container">
+
+        <div class="form-popup hidden d-flex justify-content-center align-items-center">
+          <form method="get" class="row justify-content-center p-5">
+            <i class="fa-solid fa-circle-xmark close-btn"></i>
+
+            <div class="col-10 mb-3">
+              <label for="username">Username</label>
+              <input class="form-control" id="username" type="text" placeholder="Entrez Username" autocomplete="off">
+            </div>
+            
+            <div class="col-10 mb-4">
+              <label for="group">Group</label>
+              <select id="group" class="form-select">
+                <option value="title" disabled selected>Choisir votre group</option>
+                <option value="geran">Geran</option>
+                <option value="serveur">Serveur</option>
+                <option value="cuisinier">Cuisinier</option>
+              </select>
+            </div>
+            
+            <div class="col-10">
+              <input type="submit" value="Submit" class="btn submit-btn">
+            </div>
+          </form>
+        </div>
+
+        <button class="add-btn">
+          <i class="fa-solid fa-circle-plus"></i>
+        </button>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Username</th>
+              <th scope="col">Group</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">User01</td>
+              <td>Geran</td>
+              <td>
+                <button class="edit-btn">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+              </td>
+              <td>
+                <button class="delete-btn">
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>User02</td>
+              <td>Serveur</td>
+              <td>
+                <button class="edit-btn">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+              </td>
+              <td>
+                <button class="delete-btn">
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>User03</td>
+              <td>Cuisinier</td>
+              <td>
+                <button class="edit-btn">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+              </td>
+              <td>
+                <button class="delete-btn">
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </main>
 
     <script src="script/bootstrap.bundle.min.js"></script>
