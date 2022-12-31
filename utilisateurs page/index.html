@@ -64,17 +64,12 @@
 
             <div class="col-10 mb-3">
               <label for="username">Username</label>
-              <input class="form-control" id="username" type="text" placeholder="Entrez Username" autocomplete="off">
+              <input class="form-control" id="username" type="text" required placeholder="Entrez Username" autocomplete="off">
             </div>
             
             <div class="col-10 mb-4">
               <label for="group">Group</label>
-              <select id="group" class="form-select">
-                <option value="title" disabled selected>Choisir votre group</option>
-                <option value="geran">Geran</option>
-                <option value="serveur">Serveur</option>
-                <option value="cuisinier">Cuisinier</option>
-              </select>
+              <input class="form-control" id="group" type="text" required placeholder="Entrez Group" autocomplete="off">
             </div>
             
             <div class="col-10">
@@ -95,45 +90,13 @@
           </thead>
           <tbody>
             <tr>
-              <td scope="row">User01</td>
-              <td>Geran</td>
+              <td class="p-3">User01</td>
+              <td class="p-3">Geran</td>
               <td>
-                <button class="edit-btn">
-                  <i class="fa-solid fa-pen-to-square"></i>
-                </button>
+                <i class="fa-solid fa-pen-to-square edit-btn p-3 pb-1"></i>
               </td>
               <td>
-                <button class="delete-btn">
-                  <i class="fa-solid fa-trash-can"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>User02</td>
-              <td>Serveur</td>
-              <td>
-                <button class="edit-btn">
-                  <i class="fa-solid fa-pen-to-square"></i>
-                </button>
-              </td>
-              <td>
-                <button class="delete-btn">
-                  <i class="fa-solid fa-trash-can"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>User03</td>
-              <td>Cuisinier</td>
-              <td>
-                <button class="edit-btn">
-                  <i class="fa-solid fa-pen-to-square"></i>
-                </button>
-              </td>
-              <td>
-                <button class="delete-btn">
-                  <i class="fa-solid fa-trash-can"></i>
-                </button>
+                <i class="fa-solid fa-trash-can delete-btn p-3 pb-1"></i>
               </td>
             </tr>
           </tbody>

@@ -164,5 +164,7 @@ form {
   border: 0;
   background-color: var(--white-color);
   color:var(--main-color);
+  cursor: pointer;
+  z-index: 2;
 }
 /* end main style */
