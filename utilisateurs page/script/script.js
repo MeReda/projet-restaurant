@@ -72,7 +72,11 @@ document.querySelector("tbody").addEventListener("click", (e) => {
 
         selectedRow = target.parentElement.parentElement;
         document.querySelector("#username").value = selectedRow.children[0].textContent;
-        document.querySelector("#group").value = selectedRow.children[1].text;
+        document.querySelector("#group").value = selectedRow.children[1].textContent;
+        const closeButton = document.querySelector(".close-btn");
+        closeButton.addEventListener("click", () => {
+            formPopup.classList.add("hidden");
+        });
     }
 });
 
