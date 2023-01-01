@@ -128,7 +128,7 @@ form {
 .close-btn {
   position: absolute;
   top: .5rem;
-  right: -19.5rem;
+  right: -20rem;
   font-size: 1.5rem;
   color: var(--main-color);
   cursor: pointer;
