@@ -80,8 +80,10 @@ document.querySelector("tbody").addEventListener("click", (e) => {
 document.querySelector("tbody").addEventListener("click", (e) => {
     target = e.target;
     if (target.classList.contains("delete-btn")) {
-        target.parentElement.parentElement.remove();
-        alert("Utilisateur est supprimé avec succées")
+        if (confirm("Voulez-vous vraiment le supprimé")) {
+            target.parentElement.parentElement.remove();
+            alert("Utilisateur est supprimé avec succées")
+        }
     }
 })
 
