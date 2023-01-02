@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css" />
     <link rel="stylesheet" href="styles/all.min.css" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="ss.css">
   </head>
   <body class="d-flex align-items-center">
     <nav>
@@ -29,7 +30,7 @@
                 Stock
             </a>
         </li>
-        <li>
+        <li >
             <a href="#">
                 <i class="fa-solid fa-users me-2"></i>
                 Personnels
@@ -55,50 +56,99 @@
         </li>
       </ul>
     </div>
-    <main>
-        <div class="container">
-            <button class="btn-1"><i class="fa-solid fa-circle-plus"></i></button>          
-            <table class="table">
-              <thead>
-                <h4>Les plats</h4>
-                <tr>
-                    <th>Image</th>
-                    <th>Nom</th>
-                    <th>Prix</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                    <td><img class="pi" src="imgs/pasta.png" alt=""></td>
-                    <td>Pasta</td>
-                    <td>50 DH</td>
-                    <td><button class="btn-2"><i class="fa-solid fa-pen-to-square"></i></button></td>
-                    <td><button class="btn-3"><i class="fa-solid fa-trash-can"></i></button></td>
-                </tr>
-                <tr>
-                    <td><img class="pi" src="imgs/viande.png" ></td>
-                    <td>Viande</td>
-                    <td>120 DH</td>
-                    <td><button class="btn-2"><i class="fa-solid fa-pen-to-square"></i></button></td>
-                    <td><button class="btn-3"><i class="fa-solid fa-trash-can"></i></button></td>
-                </tr>
-                <tr>
-                    <td><img class="pi" src="imgs/juse.png" ></td>
-                    <td>jus d'orange</td>
-                    <td>20 DH</td>
-                    <td><button class="btn-2"><i class="fa-solid fa-pen-to-square"></i></button></td>
-                    <td><button class="btn-3"><i class="fa-solid fa-trash-can"></i></button></td>
-                </tr>
-                <tr>
-                    <td><img class="pi" src="imgs/coca.png" ></td>
-                    <td>Boisson</td>
-                    <td>10 DH</td>
-                    <td><button class="btn-2"><i class="fa-solid fa-pen-to-square"></i></button></td>
-                    <td><button class="btn-3"><i class="fa-solid fa-trash-can"></i></button></td>
-                </tr>
-              </tbody>
-            </table>
+    
+    
+    
+    <main class="d-flex align-items-center justify-content-center">
+      <div class="container">
+        <!-- Start form-popup  -->
+        <div class="form-popup hidden d-flex justify-content-center align-items-center">
+          <form method="get" class="row justify-content-center p-5">
+            <i class="fa-solid fa-circle-xmark close-btn"></i>
+
+            <div class="col-10 mb-3">
+              <label for="nom">Images</label>
+              <input class="form-control" id="nom" type="text" required placeholder="Poster une image" autocomplete="off">
+            </div>
+            
+            <div class="col-10 mb-4">
+              <label for="nom">Nom</label>
+              <input class="form-control" id="prenom" type="text" required placeholder="Entrez le nom" autocomplete="off">
+            </div>
+
+            <div class="col-10 mb-3">
+              <label for="cin">Prix</label>
+              <input class="form-control" id="cin" type="text" required placeholder="Donner un prix" autocomplete="off">
+            </div>
+            
+            <div class="col-10">
+              <input type="submit" value="Submit" class="btn submit-btn">
+            </div>
+          </form>
         </div>
+        <!-- End form-popup  -->
+        <button class="add-btn">
+          <i class="fa-solid fa-circle-plus"></i>
+        </button>
+        <table class="table">
+          <caption class="cap" align="top">
+            <select class="form-control"><option>Petit Déjeuner</option>
+              <option>Nos Plats</option>
+              <option>Jus</option>
+              <option>Dessert</option>
+              <option>Sandwich</option>
+              <option>Pizza</option>
+            </select>
+          </caption>
+          <thead>
+            <h3>Petit déjeuner</h3>
+            <tr>
+              <th scope="col">Images</th>
+              <th scope="col">Nom</th>
+              <th scope="col">Prix</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-3"><img class="pi" src="imgs/anglais.png" alt=""></td>
+              <td class="p-3">Anglais</td>
+              <td class="p-3">69dh</td>
+              <td>
+                <i class="fa-solid fa-pen-to-square edit-btn p-3 pb-1"></i>
+              </td>
+              <td>
+                <i class="fa-solid fa-trash-can delete-btn p-3 pb-1"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table">
+          
+            <thead>
+              <tr>
+                <th scope="col">Images</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Prix</th>
+                
+              </tr>
+            </thead><br>
+            <h3>Salade</h3>
+            <tbody>
+              <tr>
+                <td class="p-3"><img class="pi" src="imgs/salade1.png" alt=""></td>
+                <td class="p-3">Simple</td>
+                <td class="p-3">30dh</td>
+                <td>
+                  <i class="fa-solid fa-pen-to-square edit-btn p-3 pb-1"></i>
+                </td>
+                <td>
+                  <i class="fa-solid fa-trash-can delete-btn p-3 pb-1"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
     </main>
 
     <script src="script/bootstrap.bundle.min.js"></script>
