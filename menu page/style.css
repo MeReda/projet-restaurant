@@ -41,6 +41,7 @@
   
   .table {
       margin: 0 auto;
+      
   }
   
   .add-btn {
@@ -64,7 +65,3 @@
   font-size: 1.3rem;
   font-style: oblique;
   font-family: Georgia, 'Times New Roman', Times, serif;}
-  .pi{
-    border-radius: 50%;
-    width: 40px;
-}
