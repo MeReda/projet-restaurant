@@ -88,7 +88,7 @@ nav {
   color: var(--main-color);
   text-decoration: none;
   font-weight: bold;
-  font-size: .7rem;
+  font-size: .6rem;
 }
 
 /* end sidebar style */
@@ -112,6 +112,7 @@ main {
   top: 0;
   left: 0;
   z-index: 2;
+
 }
 
 .hidden {
@@ -123,12 +124,13 @@ form {
   border: 2px solid var(--main-color);
   border-radius: 1rem;
   position: absolute;
+  width: 80%;
 }
 
 .close-btn {
   position: absolute;
   top: .5rem;
-  right: -20rem;
+  right: -28rem;
   font-size: 1.5rem;
   color: var(--main-color);
   cursor: pointer;
