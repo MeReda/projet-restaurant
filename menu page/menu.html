@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/all.min.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="d-flex align-items-center">
+    <nav>
+        <i class="fa-solid fa-bell nav--button p-4 pe-5"></i>
+    </nav>
+    <div class="sidebar">
+      <img class="logo mt-3" src="imgs/logo.svg" alt="app logo"/>
+
+      <ul class="section-buttons pt-5">
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-house me-2"></i>
+                Accueil
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-warehouse me-2"></i>
+                Stock
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-users me-2"></i>
+                Personnels
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-calendar-days me-2"></i>
+                Reservations
+            </a>
+        </li>
+        <li class="active">
+            <a href="#">
+                <i class="fa-solid fa-solid fa-book-open me-2"></i>
+                Menu
+            </a>
+        </li>
+        <li >
+            <a href="#">
+                <i class="fa-solid fa-user me-2"></i>
+                Utilisateurs
+            </a>
+        </li>
+      </ul>
+    </div>
+    <main class="d-flex align-items-center justify-content-center">
+      <div class="container">
+        <!-- Start form-popup  -->
+        <div class="form-popup hidden d-flex justify-content-center align-items-center">
+          <form method="get" class="row justify-content-center p-5">
+            <i class="fa-solid fa-circle-xmark close-btn"></i>
+
+            <div class="col-10 mb-3">
+              <label for="username">Nom</label>
+              <input class="form-control" id="username" type="text" required placeholder="Entrez Le Nom" autocomplete="off">
+            </div>
+            
+            <div class="col-10 mb-4">
+              <label for="group">Ingrediant</label>
+              <input class="form-control" id="group" type="text" required placeholder="Entrez Les Ingrediant" autocomplete="off">
+            </div>
+
+            <div class="col-10 mb-5">
+                <label for="group">Prix</label>
+                <input class="form-control" id="group" type="text" required placeholder="Donnez Un Prix" autocomplete="off">
+              </div>
+            
+            <div class="col-10">
+              <input type="submit" value="Submit" class="btn submit-btn">
+            </div>
+          </form>
+        </div>
+        <!-- End form-popup  -->
+
+        <button class="add-btn">
+          <i class="fa-solid fa-circle-plus"></i>
+        </button>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Nom</th>
+              <th scope="col">Ingrediant</th>
+              <th scope="col">Prix</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-3">Anglais</td>
+              <td class="p-3">Saucisses, Oeufs,Champignons...</td>
+              <td class="p-3">69dh</td>
+              <td>
+                <i class="fa-solid fa-pen-to-square edit-btn p-3 pb-1"></i>
+              </td>
+              <td>
+                <i class="fa-solid fa-trash-can delete-btn p-3 pb-1"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="script/bootstrap.bundle.min.js"></script>
+    <script src="script/all.min.js"></script>
+    <script src="script/script.js"></script>
+  </body>
+</html>
