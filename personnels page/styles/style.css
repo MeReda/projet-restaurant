@@ -123,12 +123,14 @@ form {
   border: 2px solid var(--main-color);
   border-radius: 1rem;
   position: absolute;
+  width: 50rem;
+  height: 36rem;
 }
 
 .close-btn {
   position: absolute;
   top: 2rem;
-  right: -40rem;
+  right: -23rem;
   font-size: 1.5rem;
   color: var(--main-color);
   cursor: pointer;
