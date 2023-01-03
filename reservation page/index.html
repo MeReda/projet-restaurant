@@ -64,7 +64,17 @@
                     <div class="col-1">
                     </div>
                     <div class="col-2">
-                        <img src="../reservation page/imgs/1.png" alt="">
+                        <div class="reservation-container hidden">
+                            <form class="reservation-popup text-center p-5">
+                                <i class="fa-solid fa-circle-xmark close-btn"></i>
+                                <h3>Table 01</h3>
+                                <span class="reservation-state badge rounded-pill text-bg-success">libre</span>
+                                <input class="form-control mt-4 reservation-input" type="text" placeholder="entrez nom du clien" required>
+                                <button class="reservation-add-btn mt-3" type="submit">ajouter</button>
+                                <span class="reservation-del-btn mt-3 hidden">libéré</span>
+                            </form>
+                        </div>
+                        <img class="reservation-img" src="../reservation page/imgs/1.png" alt="table 1 image">
                     </div>
                     <div class="col-2">
                         <img src="../reservation page/imgs/2.png" alt="">
