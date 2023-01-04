@@ -134,4 +134,13 @@ main {
   grid-column-start: 4;
   grid-column-end: span 2;
 }
+
+.disabled {
+  background-color: #eee !important;
+}
+
+.disabled > * {
+  color: #aaa !important;
+  cursor: not-allowed !important;
+}
 /* end main style */
