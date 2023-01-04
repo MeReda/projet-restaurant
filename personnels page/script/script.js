@@ -18,7 +18,7 @@ let selectedRow = null;
 
 // Clear All Fields
 function clearFields() {
-    document.querySelector("#group").value = "";
+    document.querySelector("#poste").value = "";
     document.querySelector("#nom").value = "";
     document.querySelector("#prenom").value = "";
     document.querySelector("#cin").value = "";
@@ -32,7 +32,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
 
     // Get Form Values
     const 
-        group = document.querySelector("#group").value,
+        poste = document.querySelector("#poste").value,
         nom = document.querySelector("#nom").value,
         prenom = document.querySelector("#prenom").value,
         cin = document.querySelector("#cin").value,
@@ -50,7 +50,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
                 row = document.createElement("tr");
 
             row.innerHTML = `
-                <td class="p-3">${group}</td>
+                <td class="p-3">${poste}</td>
                 <td class="p-3">${nom}</td>
                 <td class="p-3">${prenom}</td>
                 <td class="p-3">${cin}</td>
@@ -67,7 +67,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
             selectedRow = null;
             alert(`${nom} ajouté avec succé`);
         } else {
-            selectedRow.children[0].textContent = group;
+            selectedRow.children[0].textContent = poste;
             selectedRow.children[1].textContent = nom;
             selectedRow.children[2].textContent = prenom;
             selectedRow.children[3].textContent = cin;
@@ -90,7 +90,7 @@ document.querySelector("tbody").addEventListener("click", (e) => {
     if (target.classList.contains("edit-btn")) {
         formPopup.classList.remove("hidden");
         selectedRow = target.parentElement.parentElement;
-        document.querySelector("#group").value = selectedRow.children[0].textContent;
+        document.querySelector("#poste").value = selectedRow.children[0].textContent;
         document.querySelector("#nom").value = selectedRow.children[1].textContent;
         document.querySelector("#prenom").value = selectedRow.children[2].textContent;
         document.querySelector("#cin").value = selectedRow.children[3].textContent;
