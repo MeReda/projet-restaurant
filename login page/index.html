@@ -23,24 +23,28 @@
                         <span class="input-group-text" id="basic-addon1">
                             <i class="fa-solid fa-user"></i>
                         </span>
-                        <input type="text" class="form-control" placeholder="Username">
+                        <input id="username" type="text" class="form-control" placeholder="Username">
                     </div>
                     
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">
                             <i class="fa-solid fa-lock"></i>
                         </span>
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input id="password" type="password" class="form-control" placeholder="Password">
                     </div>              
                 
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected disabled>choisir votre group</option>
+                    <select id="group" class="form-select" aria-label="Default select example">
+                        <option value="" selected disabled>choisir votre group</option>
                         <option value="1">Gerant</option>
                         <option value="2">Serveur</option>
                         <option value="3">Cuisinier</option>
                     </select>
+
+                    <span id="error-msg" class="mt-2 text-danger hidden">information incorrect</span>
         
-                    <button class="main-btn mt-4" type="submit">Login</button>
+                    <div class="button-container mt-5">
+                        <a id="submit" class="main-btn disabled" href="../home page/">Login</a>
+                    </div>
                 </form>
             </div>
         </div>

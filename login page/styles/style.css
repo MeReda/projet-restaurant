@@ -50,6 +50,10 @@ form {
   margin: 0;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .main-btn {
   border: none;
   background-color: var(--main-color);
@@ -58,8 +62,21 @@ form {
   padding: 1rem 2.5rem;
   border-radius: var(--border-radius);
   transition: .5s;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .main-btn:hover {
   padding: 1rem 3rem;
+  color: var(--white-color);
+}
+
+.disabled {
+  pointer-events: none;
+  background-color: #eee;
+  color: #aaa;
+}
+
+.button-container:has(.disabled) {
+  cursor: not-allowed;
 }
