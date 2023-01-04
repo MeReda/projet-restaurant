@@ -18,8 +18,9 @@ let selectedRow = null;
 
 // Clear All Fields
 function clearFields() {
-    document.querySelector("#username").value = "";
-    document.querySelector("#group").value = "";
+    document.querySelector("#nom").value = "";
+    document.querySelector("#ingrediant").value = "";
+    document.querySelector("#prix").value = "";
 }
 
 // Add Data
@@ -27,11 +28,12 @@ document.querySelector("form").addEventListener("submit", (e) => {
     e.preventDefault();
 
     // Get Form Values
-    const username = document.querySelector("#username").value,
-        group = document.querySelector("#group").value;
+    const nom = document.querySelector("#nom").value,
+          ingrediant = document.querySelector("#ingrediant").value,
+          prix = document.querySelector("#prix").value;
 
     // Validate
-    if (username == "" || group == "title") {
+    if (nom == "" || ingrediant == "title") {
         alert("Remplir tous les données");
     } else {
         if (selectedRow == null) {
@@ -39,8 +41,9 @@ document.querySelector("form").addEventListener("submit", (e) => {
                 row = document.createElement("tr");
 
             row.innerHTML = `
-                <td class="p-3">${username}</td>
-                <td class="p-3">${group}</td>
+                <td class="p-3">${nom}</td>
+                <td class="p-3">${ingrediant}</td>
+                <td class="p-3">${prix}</td>
                 <td>
                     <i class="fa-solid fa-pen-to-square edit-btn p-3 pb-1"></i>
                 </td>
@@ -52,10 +55,11 @@ document.querySelector("form").addEventListener("submit", (e) => {
             selectedRow = null;
             alert(`${username} ajouté avec succé`);
         } else {
-            selectedRow.children[0].textContent = username;
-            selectedRow.children[1].textContent = group;
+            selectedRow.children[0].textContent = nom;
+            selectedRow.children[1].textContent = ingrediant;
+            selectedRow.children[2].textContent = prix;
             selectedRow = null;
-            alert(`${username} modifier avec succé`);
+            alert(`${nom} modifier avec succé`);
             formPopup.classList.add("hidden");
         }
 
@@ -71,8 +75,9 @@ document.querySelector("tbody").addEventListener("click", (e) => {
         formPopup.classList.remove("hidden");
 
         selectedRow = target.parentElement.parentElement;
-        document.querySelector("#username").value = selectedRow.children[0].textContent;
-        document.querySelector("#group").value = selectedRow.children[1].textContent;
+        document.querySelector("#nom").value = selectedRow.children[0].textContent;
+        document.querySelector("#ingrediant").value = selectedRow.children[1].textContent;
+        document.querySelector("#prix").value = selectedRow.children[2].textContent;
         const closeButton = document.querySelector(".close-btn");
         closeButton.addEventListener("click", () => {
             formPopup.classList.add("hidden");
