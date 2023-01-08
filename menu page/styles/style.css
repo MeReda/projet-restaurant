@@ -166,4 +166,13 @@ form {
   cursor: pointer;
   z-index: 2;
 }
+
+.disabled {
+  background-color: #eee !important;
+}
+
+.disabled > * {
+  color: #aaa !important;
+  cursor: not-allowed !important;
+}
 /* end main style */
