@@ -66,12 +66,17 @@
 
             <div class="col-10 mb-3">
               <label for="username">Username</label>
-              <input class="form-control" id="username" type="text" required placeholder="Entrez Username" autocomplete="off">
+              <input class="form-control" id="username" type="text" required placeholder="Entrez nom d'utilisateur" autocomplete="off">
+            </div>
+
+            <div class="col-10 mb-3">
+              <label for="username">Password</label>
+              <input class="form-control" id="password" type="text" required placeholder="Entrez mot de passe" autocomplete="off">
             </div>
             
             <div class="col-10 mb-4">
-              <label for="group">Group</label>
-              <input class="form-control" id="group" type="text" required placeholder="Entrez Group" autocomplete="off">
+              <label for="group">Post</label>
+              <input class="form-control" id="group" type="text" required placeholder="Entrez post" autocomplete="off">
             </div>
             
             <div class="col-10">
@@ -88,13 +93,37 @@
           <thead>
             <tr>
               <th scope="col">Username</th>
+              <th scope="col">Password</th>
               <th scope="col">Group</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="p-3">User01</td>
+              <td class="p-3">Admin1</td>
+              <td class="p-3">Admin1</td>
               <td class="p-3">Geran</td>
+              <td>
+                <i class="fa-solid fa-pen-to-square edit-btn p-3 pb-1"></i>
+              </td>
+              <td>
+                <i class="fa-solid fa-trash-can delete-btn p-3 pb-1"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="p-3">Admin2</td>
+              <td class="p-3">Admin2</td>
+              <td class="p-3">Serveur</td>
+              <td>
+                <i class="fa-solid fa-pen-to-square edit-btn p-3 pb-1"></i>
+              </td>
+              <td>
+                <i class="fa-solid fa-trash-can delete-btn p-3 pb-1"></i>
+              </td>
+            </tr>
+            <tr>
+              <td class="p-3">Admin3</td>
+              <td class="p-3">Admin3</td>
+              <td class="p-3">Cuisinier</td>
               <td>
                 <i class="fa-solid fa-pen-to-square edit-btn p-3 pb-1"></i>
               </td>
