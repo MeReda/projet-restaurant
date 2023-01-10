@@ -6,12 +6,8 @@ const stockBtn = document.querySelector(".stock-btn"),
     menuBtn = document.querySelector(".menu-btn"),
     utilisateursBtn = document.querySelector(".utilisateurs-btn");
 
-console.log(stockBtn)
-console.log(window.localStorage.group);
-
 window.onload = () => {
     if (window.localStorage.group == "2") {
-        console.log("look above")
         stockBtn.classList.add("disabled");
         personnelsBtn.classList.add("disabled");
         menuBtn.classList.add("disabled");
@@ -26,59 +22,65 @@ window.onload = () => {
 
 // Start privileges script for diff users
 
-const popupContainer = document.querySelector(".reservation-container"),
-    tableImg = document.querySelector(".reservation-img");
+// Start show table state for each table
 
-// Start hide and undide popup script
+function showState(tNumber) {
+    // Get Elements
+    const popupContainer = document.querySelector(`.table-${tNumber}`),
+        closeBtn = document.querySelector(`.table-${tNumber} .close-btn`),
+        myForm = document.querySelector(`.table-${tNumber} .reservation-popup`),
+        stateTag = document.querySelector(
+            `.table-${tNumber} .reservation-state`
+        ),
+        inputField = document.querySelector(
+            `.table-${tNumber} .reservation-input`
+        ),
+        addBtn = document.querySelector(
+            `.table-${tNumber} .reservation-add-btn`
+        ),
+        delBtn = document.querySelector(
+            `.table-${tNumber} .reservation-del-btn`
+        );
 
-tableImg.addEventListener("click", () => {
+    // Show and hide popup
     popupContainer.classList.remove("hidden");
-    const closeBtn = document.querySelector(".close-btn");
+
     closeBtn.addEventListener("click", () => {
         popupContainer.classList.add("hidden");
     });
-});
 
-// End hide and undide popup script
+    // Change table state on submit
+    myForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        stateTag.classList.remove("text-bg-success");
+        stateTag.classList.add("text-bg-danger");
+        stateTag.textContent = "reservé";
 
-// Start add reservation script
-
-const popupForm = document.querySelector("form.reservation-popup");
-popupForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    // make reservation state reserved
-    const reservationState = document.querySelector(".reservation-state");
-    reservationState.classList.remove("text-bg-success");
-    reservationState.classList.add("text-bg-danger");
-    reservationState.textContent = "reservé";
-
-    // make input field disabled
-    const reservationInput = document.querySelector(".reservation-input");
-    reservationInput.disabled = true;
-
-    // hide add button and make del button visible
-    const reservationAddBtn = document.querySelector(".reservation-add-btn");
-    reservationAddBtn.classList.add("hidden");
-
-    const reservationDelBtn = document.querySelector(".reservation-del-btn");
-    reservationDelBtn.classList.remove("hidden");
-
-    // add event listner to reservation del button
-    reservationDelBtn.addEventListener("click", () => {
-        // make reservation state libre
-        reservationState.classList.remove("text-bg-danger");
-        reservationState.classList.add("text-bg-success");
-        reservationState.textContent = "libre";
-
-        // make input field empty and make it enable
-        reservationInput.value = "";
-        reservationInput.disabled = false;
-
-        // hide add button and make del button visible
-        reservationAddBtn.classList.remove("hidden");
-        reservationDelBtn.classList.add("hidden");
+        // make input field disabled
+        inputField.disabled = true;
     });
-});
 
-// End add reservation script
+    // ----------------------- Problem down ----------------------- add (time begin) (time end) (date) (menu item id)
+     // Change buttons
+     delBtn.classList.toggle("hidden")
+     addBtn.classList.toggle("hidden")
+ 
+     // add event listner to reservation del button
+     delBtn.addEventListener("click", () => {
+         // make reservation state libre
+         stateTag.classList.remove("text-bg-danger");
+         stateTag.classList.add("text-bg-success");
+         stateTag.textContent = "libre";
+ 
+         // make input field empty and make it enable
+         inputField.value = "";
+         inputField.disabled = false;
+ 
+         // hide add button and make del button visible
+         delBtn.classList.toggle("hidden");
+         addBtn.classList.toggle("hidden");
+
+     });
+}
+
+// End show table state for each table

@@ -77,6 +77,6 @@ form {
   color: #aaa;
 }
 
-.button-container:has(.disabled) {
+.button-container  {
   cursor: not-allowed;
 }

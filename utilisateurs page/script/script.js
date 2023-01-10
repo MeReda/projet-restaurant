@@ -19,6 +19,7 @@ let selectedRow = null;
 // Clear All Fields
 function clearFields() {
     document.querySelector("#username").value = "";
+    document.querySelector("#password").value = "";
     document.querySelector("#group").value = "";
 }
 
@@ -28,6 +29,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
 
     // Get Form Values
     const username = document.querySelector("#username").value,
+        password = document.querySelector("#password").value,
         group = document.querySelector("#group").value;
 
     // Validate
@@ -40,6 +42,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
 
             row.innerHTML = `
                 <td class="p-3">${username}</td>
+                <td class="p-3">${password}</td>
                 <td class="p-3">${group}</td>
                 <td>
                     <i class="fa-solid fa-pen-to-square edit-btn p-3 pb-1"></i>
@@ -53,7 +56,8 @@ document.querySelector("form").addEventListener("submit", (e) => {
             alert(`${username} ajouté avec succé`);
         } else {
             selectedRow.children[0].textContent = username;
-            selectedRow.children[1].textContent = group;
+            selectedRow.children[1].textContent = password;
+            selectedRow.children[2].textContent = group;
             selectedRow = null;
             alert(`${username} modifier avec succé`);
             formPopup.classList.add("hidden");
@@ -72,7 +76,8 @@ document.querySelector("tbody").addEventListener("click", (e) => {
 
         selectedRow = target.parentElement.parentElement;
         document.querySelector("#username").value = selectedRow.children[0].textContent;
-        document.querySelector("#group").value = selectedRow.children[1].textContent;
+        document.querySelector("#password").value = selectedRow.children[1].textContent;
+        document.querySelector("#group").value = selectedRow.children[2].textContent;
         const closeButton = document.querySelector(".close-btn");
         closeButton.addEventListener("click", () => {
             formPopup.classList.add("hidden");
