@@ -1,3 +1,19 @@
+// Start pageloader code 
+
+let pageLoader = document.getElementById("pageLoader");
+
+function showLoader() {
+    pageLoader.style.display = "flex";
+}
+
+function hideLoader() {
+    pageLoader.style.display = "none";
+}
+
+window.addEventListener('load', hideLoader);
+
+// End pageloader code
+
 // Begin display form on click on add button
 const addButton = document.querySelector(".add-btn"),
     formPopup = document.querySelector(".form-popup");

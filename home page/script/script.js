@@ -1,10 +1,25 @@
+// Start pageloader code 
+
+let pageLoader = document.getElementById("pageLoader");
+
+function showLoader() {
+    pageLoader.style.display = "flex";
+}
+
+function hideLoader() {
+    pageLoader.style.display = "none";
+}
+
+window.addEventListener('load', hideLoader);
+
+// End pageloader code
+
+// Start user priviliges display
 const stockBtn = document.querySelector(".stock-btn"),
     personnelsBtn = document.querySelector(".personnels-btn"),
     reservationBtn = document.querySelector(".reservation-btn"),
     menuBtn = document.querySelector(".menu-btn"),
     utilisateursBtn = document.querySelector(".utilisateurs-btn");
-
-console.log(window.localStorage.group);
 
 window.onload = () => {
     if (window.localStorage.group == "2") {
@@ -19,3 +34,4 @@ window.onload = () => {
         utilisateursBtn.classList.add("disabled");
     }
 };
+// End user priviliges display

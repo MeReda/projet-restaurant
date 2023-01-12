@@ -1,3 +1,19 @@
+// Start pageloader code 
+
+let pageLoader = document.getElementById("pageLoader");
+
+function showLoader() {
+    pageLoader.style.display = "flex";
+}
+
+function hideLoader() {
+    pageLoader.style.display = "none";
+}
+
+window.addEventListener('load', hideLoader);
+
+// End pageloader code
+
 // Start previliges for users
 
 const stockBtn = document.querySelector(".stock-btn"),

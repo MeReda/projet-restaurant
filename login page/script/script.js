@@ -1,3 +1,20 @@
+// Start pageloader code 
+
+let pageLoader = document.getElementById("pageLoader");
+
+function showLoader() {
+    pageLoader.style.display = "flex";
+}
+
+function hideLoader() {
+    pageLoader.style.display = "none";
+}
+
+window.addEventListener('load', hideLoader);
+
+// End pageloader code
+
+// Start user priviliges display
 const usernameField = document.querySelector("#username"),
     passwordField = document.querySelector("#password"),
     groupSelect = document.querySelector("#group"),
@@ -19,3 +36,4 @@ groupSelect.addEventListener("click", () => {
         submitBtn.classList.add("disabled")
     }
 })
+// End user priviliges display
