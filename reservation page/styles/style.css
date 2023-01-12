@@ -161,6 +161,10 @@ main {
   padding: .5rem 2rem;
 }
 
+.reservation-input:disabled {
+  cursor: not-allowed;
+}
+
 .reservation-img {
   cursor: pointer;
 }
