@@ -1,4 +1,4 @@
-# Project Restaurant Github Repository Documentation
+# Project Restaurant 
 
 This repository contains the source code for the "Project Restaurant" website, which serves as the front-end for a platform aimed at simplifying restaurant management. The website was developed as a school project by a group of students with the aim of showcasing their skills and learning new technologies. The front-end includes several functionalities, including login, home, stock management, personnel management, reservation management, menu management, and user management.
 
