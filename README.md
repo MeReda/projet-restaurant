@@ -16,7 +16,7 @@ The development of each page is being handled by a specific team member, as foll
 
 ## Project Link
 
-To access the website, please follow this link: https://mereda.github.io/projet-restaurant/instruction.html
+To access the website, please follow this link: https://mereda.github.io/projet-restaurant/login%20page/
 
 ## Contributing
 
